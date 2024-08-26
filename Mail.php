@@ -1,6 +1,6 @@
 <?php
 
-//use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\PHPMailer;
 
 // ini_set('display_errors',1);
 // require_once 'PHPMailInclude.php';
@@ -15,11 +15,11 @@ if (isset($_POST['submit']))
     $email = $_POST['email'];
     $subject = $_POST['subject'];
     $message=$_POST['message'];
-        $query = "INSERT INTO contact_details(customername,email,enquiry,information) VALUES 
-      ('$name','$email','$subject', '$message');";
+    //     $query = "INSERT INTO contact_details(customername,email,enquiry,information) VALUES 
+    //   ('$name','$email','$subject', '$message');";
 
-         $result= mysqli_query($conn,$query);
-         print_r($result);
+    //      $result= mysqli_query($conn,$query);
+    //      print_r($result);
 $html=  "<table border=1px>
 <tr>
 <th>Name</th>
@@ -51,7 +51,7 @@ $mail->Username="lakshminarayan202254@gmail.com";
 $mail->Password="gxnu hmyl fyag bchz";
 $mail->setFrom('lakshminarayan202254@gmail.com');
 $mail->isHTML(true);
-$mail->addAddress('kesaratgiarpita@gmail.com');
+$mail->addAddress('narasa2012@gmail.com');
 $mail->addAddress('Info@crescenttechnosofts.com');
 $mail->Subject="Customer Information";
 $mail->Body=$html;
